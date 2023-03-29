@@ -35,3 +35,7 @@ function copyToClipboard() {
     messageElement.textContent = "Add on Discord!";
   }, 2000); // Set the text back to the original after 2 seconds
 }
+
+
+
+
