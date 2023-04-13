@@ -293,6 +293,19 @@ video {
   color: #b9bbbe;
 }
 
+.username {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.icons {
+  margin-left: 4px; 
+  height: auto; 
+  max-width: 24px; /* Set max-width to limit size of image */
+  max-height: 24px; /* Set max-height to limit size of image */
+  user-drag: none;
+}
+
 .card-body .profile-body hr {
   border: none;
   border-top: 0.5px solid #33353b;
@@ -481,7 +494,9 @@ right: 60px;
 }
 
 html,body {
-	background:#3e3c3c;
+  background-image: url('#');
+  background-size: 100% 100%;
+  background-attachment: fixed;
 }
 .multipoint {
 	display:none;
