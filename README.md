@@ -9,7 +9,7 @@ Source for a website bio page inspired by the Discord Profile Card.
 
 - Background Music
 - Background Video / Image
-- CS:GO Inspired Killfeed
+- CS:GO Inspired Killfeed (which you can easily remove, but I thought it's cool)
 - Typing Effect on "About Me" Section
 
 
