@@ -60,6 +60,7 @@ const audioClip = document.getElementById('audioClip');
 const playIcon = document.getElementById('playIcon');
 const pauseIcon = document.getElementById('pauseIcon');
 const slider = document.querySelector('.slider');
+const volumeSlider = document.getElementById('volumeSlider'); // Add this line
 
 function toggleAudio() {
   if (audioClip.paused) {
@@ -76,9 +77,22 @@ function toggleAudio() {
 }
 
 audioClip.addEventListener('play', function() {
-  slider.style.display = 'block'; 
+  slider.style.display = 'block';
 });
 
 audioClip.addEventListener('pause', function() {
   slider.style.display = 'none';
 });
+
+volumeSlider.addEventListener('input', function() { // Add this event listener
+  audioClip.volume = volumeSlider.value;
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.code === 'Space') {
+    e.preventDefault();
+    toggleAudio();
+  }
+});
+
+audioClip.volume = 0.5;

@@ -18,6 +18,7 @@
   padding: 0;
   font-family: "Whitney", sans-serif;
   box-sizing: border-box;
+  
 }
 
 body,
@@ -84,6 +85,35 @@ video {
   border-top: 6px solid #18191c;
 }
 
+#volumeSliderContainer {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  border: none;
+  border-radius: 10px;
+  width: 30px;
+  height: 110px;
+  padding: 10px;
+  background-color: #292b2f;
+  opacity: 0.8;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  pointer-events: auto;
+}
+
+#volumeSlider {
+  -webkit-appearance: slider-vertical;
+  height: 100%;
+  accent-color:#14c655;
+}
+
+#volumeSlider:focus {
+  outline: none;
+}
+
 .modal-container {
   position: absolute;
   width: 100%;
@@ -134,8 +164,8 @@ video {
 .card {
   background: #292b2f;
   width: 345px;
-  max-height: 95%;
   height: max-content;
+  max-height: 95%;
   border-radius: 9px;
   box-shadow: 0px 0px 16px 3px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: 0px 0px 16px 3px rgba(0, 0, 0, 0.2);
