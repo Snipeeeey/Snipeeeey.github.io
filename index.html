@@ -7,11 +7,24 @@
     <link rel="icon" href="assets/img/icon.png">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link rel="stylesheet" href="https://unpkg.com/kursor/dist/kursor.css">
+    <link href='https://fonts.googleapis.com/css?family=Rajdhani:600' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/kursor"></script>
+    <script src="https://unpkg.com/kursor"></script>
+    <script src="./assets/js/killfeed.js"></script>
     <title>robinn - profile card</title>
   </head>
   <body>
+
+    <div class="kill-feed "><div>
+			<span class="player t"></span>
+				<span class="weapons">
+					<img height="20"/>
+						<img width="30" height="26" src="./assets/img/csgo/headshot.png"/>
+				</span>
+			<span class="player ct"></span></div>
+		</div>
 
     <video src="assets/img/Moving Clouds Background.mp4" loop muted autoplay>
     </video>
@@ -22,49 +35,12 @@
         <path id="playIcon" d="M8 5v14l11-7z"/>
         <path id="pauseIcon" d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
       </svg>
+      <audio id="audioClip" src="assets/audio/24songs.mp3"></audio>
     </button>
-    
-    <audio id="audioClip" src="assets/audio/24songs.mp3"></audio>
     
     <div class="slider" style="display: none;">
       <span>Playboi Carti - 24 songs</span>
     </div>
-    
-    <style>
-      #pauseIcon {
-        display: none;
-      }
-    </style>
-    
-    <script>
-      const audioButton = document.getElementById('audioButton');
-      const audioClip = document.getElementById('audioClip');
-      const playIcon = document.getElementById('playIcon');
-      const pauseIcon = document.getElementById('pauseIcon');
-      const slider = document.querySelector('.slider');
-    
-      function toggleAudio() {
-        if (audioClip.paused) {
-          audioClip.play();
-          playIcon.style.display = 'none';
-          pauseIcon.style.display = 'block';
-          slider.style.display = 'none'; // hide the slider initially
-        } else {
-          audioClip.pause();
-          playIcon.style.display = 'block';
-          pauseIcon.style.display = 'none';
-          slider.style.display = 'none'; // hide the slider when audio is paused
-        }
-      }
-    
-      audioClip.addEventListener('play', function() {
-        slider.style.display = 'block'; // show the slider when audio is played
-      });
-    
-      audioClip.addEventListener('pause', function() {
-        slider.style.display = 'none'; // hide the slider when audio is paused
-      });
-    </script>
 
     <div class="card-container">
 
@@ -92,9 +68,11 @@
               </a>
               <a href="https://www.geoguessr.com/user/58e294e3eb85294be057ee5a" class="badge-item" target="_blank">
                 <img src="./assets/img/badges/geo.png" alt="" />
-                <div class="tooltip tooltip-up">
-                  Geoguessr
-                </div>
+                <div class="tooltip tooltip-up">Geoguessr</div>
+              </a>
+              <a href="https://github.com/Snipeeeey/Snipeeeey.github.io" class="badge-item" target="_blank">
+                <img src="./assets/img/badges/github.png" alt="" />
+                <div class="tooltip tooltip-up">Github (this repo)</div>
               </a>
             </div>
             
@@ -132,11 +110,11 @@
                 </div>
                 <div class="role">
                   <div class="role-color" style="background: rgb(228, 29, 185)"></div>
-                  24 songs
+                  src on github
                 </div>
                 <div class="role">
                   <div class="role-color" style="background: rgb(236, 26, 26)"></div>
-                  Tryna Get Down
+                  :)
                 </div>
               </div>
             </div>
@@ -156,30 +134,10 @@
     </div>
 
     <div class="modal-container">
-      <div class="modal"> Hey! 
-        <a href="https://discord.gg/dJFFpaQ" target="_blank">Add me on discord</a> (hover)
+      <div class="modal"> 
+        <a href="#" target="_blank">nothing here yet</a>
       </div>
     </div>
-
     <script src="./assets/js/main.js"></script>
-    <script>
-  var typed3 = new Typed('.type', {
-    strings: ['I am Gay', 'I am Robin', 'I am Gay', 'I am a Fortnite Pro Player', 'I am a CSGO Pro Player', '🧛🏿‍♂️', 'I am Robin'],
-    typeSpeed: 90,
-    showCursor: false,
-    backSpeed: 0,
-    smartBackspace: true,
-    loop: false
-  });
-      </script>
-          <script src="https://unpkg.com/kursor"></script>
-          <script>
-              new kursor({
-                  type: 1,
-                  color: '#ffffff',
-                  removeDefaultCursor: true, 
-                  
-              })
-          </script>
   </body>
 </html>

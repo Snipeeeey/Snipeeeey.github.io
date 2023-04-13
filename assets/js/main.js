@@ -37,5 +37,48 @@ function copyToClipboard() {
 }
 
 
+new kursor({
+  type: 1,
+  color: '#ffffff',
+  removeDefaultCursor: true, 
+  
+})
 
 
+var typed3 = new Typed('.type', {
+  strings: ['I am Gay', 'I am Robin', 'I am Gay', 'I am a Fortnite Pro Player', 'I am a CSGO Pro Player', '🧛🏿‍♂️', 'I am Robin'],
+  typeSpeed: 90,
+  showCursor: false,
+  backSpeed: 0,
+  smartBackspace: true,
+  loop: false
+});
+
+
+const audioButton = document.getElementById('audioButton');
+const audioClip = document.getElementById('audioClip');
+const playIcon = document.getElementById('playIcon');
+const pauseIcon = document.getElementById('pauseIcon');
+const slider = document.querySelector('.slider');
+
+function toggleAudio() {
+  if (audioClip.paused) {
+    audioClip.play();
+    playIcon.style.display = 'none';
+    pauseIcon.style.display = 'block';
+    slider.style.display = 'none';
+  } else {
+    audioClip.pause();
+    playIcon.style.display = 'block';
+    pauseIcon.style.display = 'none';
+    slider.style.display = 'none';
+  }
+}
+
+audioClip.addEventListener('play', function() {
+  slider.style.display = 'block'; 
+});
+
+audioClip.addEventListener('pause', function() {
+  slider.style.display = 'none';
+});
